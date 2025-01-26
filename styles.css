@@ -1,3 +1,9 @@
 body {
     background-color: grey;
 }
+
+.book {
+    width: auto;
+    height: auto;
+    background-color: aqua;
+}

@@ -16,3 +16,16 @@ addBookToLibrary("The Hobbit");
 addBookToLibrary("Salem");
 
 console.log(myLibrary);
+
+function displayBooks(array) {
+    const container = document.querySelector("#library-container");
+
+    array.forEach(element => {
+        const myDiv = document.createElement("div");
+        myDiv.textContent = element.title;
+        myDiv.classList.add("book");
+        container.appendChild(myDiv);
+    });
+}
+
+displayBooks(myLibrary);
