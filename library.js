@@ -28,4 +28,14 @@ function displayBooks(array) {
     });
 }
 
+/* Add dialog / Modal */
+
+const modalBtn = document.querySelector(".add-button");
+const dialog = document.querySelector(".myDialog");
+
+modalBtn.addEventListener("click", () => {
+    dialog.showModal();
+})
+
+
 displayBooks(myLibrary);
