@@ -1,11 +1,12 @@
 const myLibrary = [];
 
-function Book(title) {
+function Book(title, read) {
     this.title = title
+    this.read = read;
 };
 
-function addBookToLibrary(book) {
-    const newBook = new Book(book);
+function addBookToLibrary(book, read) {
+    const newBook = new Book(book, read);
 
     myLibrary.push(newBook);
 };
@@ -22,7 +23,7 @@ function displayBooks(array) {
 
     array.forEach(element => {
         const myDiv = document.createElement("div");
-        myDiv.textContent = element.title;
+        myDiv.textContent = element.title + " " + element.read;
         myDiv.classList.add("book");
         container.appendChild(myDiv);
     });
@@ -33,6 +34,7 @@ function displayBooks(array) {
 const modalBtn = document.querySelector(".add-button");
 const dialog = document.querySelector(".myDialog");
 const myInput = document.querySelector("input");
+const mySelect = document.querySelector("select");
 const confirmBtn = document.querySelector(".confirm-button");
 
 modalBtn.addEventListener("click", () => {
@@ -42,7 +44,7 @@ modalBtn.addEventListener("click", () => {
 confirmBtn.addEventListener("click", (event) => {
     event.preventDefault();
     removeAllBooks();
-    dialog.close(addBookToLibrary(myInput.value));
+    dialog.close(addBookToLibrary(myInput.value, mySelect.value));
     displayBooks(myLibrary);
 })
 

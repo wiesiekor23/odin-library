@@ -12,8 +12,17 @@
     <div class="modal">
         <dialog class="myDialog">
             <form id="myModal">
-                <label for="book-name">Book Name:</label>
-                <input type="text" id="book-name" name="book-name">
+                <p>
+                    <label for="book-name">Book Name:</label>
+                    <input type="text" id="book-name" name="book-name">
+                </p>
+                <p>
+                    <label for="read-status">Did you read that Book?</label>
+                    <select class="select-read-status" name="read-status" id="read-status">
+                        <option class="option not-read">Not Read</option>
+                        <option class="option read">Read</option>
+                    </select>
+                </p>
                 <button class="confirm-button" type="submit">Confirm Book</button>
             </form>
         </dialog>
