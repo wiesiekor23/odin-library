@@ -55,5 +55,13 @@ function removeAllBooks() {
     });
 }
 
+Book.prototype.changeReadStatus = function() {
+    if (this.read == "Read") {
+        this.read = "Not Read";
+    } else {
+        this.read = "Read";
+    }
+}
 
-displayBooks(myLibrary);
+const book1 = new Book("Hyperion", "Read");
+book1.changeReadStatus();
