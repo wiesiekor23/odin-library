@@ -23,9 +23,13 @@ function displayBooks(array) {
 
     array.forEach(element => {
         const myDiv = document.createElement("div");
+        const myBtn = document.createElement("button");
         myDiv.textContent = element.title + " " + element.read;
+        myBtn.textContent = "Remove Book";
         myDiv.classList.add("book");
+        myBtn.classList.add("remove-button");
         container.appendChild(myDiv);
+        myDiv.appendChild(myBtn);
     });
 }
 
