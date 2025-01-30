@@ -21,7 +21,7 @@ console.log(myLibrary);
 function displayBooks(array) {
     const container = document.querySelector("#library-container");
     container.innerHTML = "";
-
+    
     array.forEach(element => {
         const myDiv = document.createElement("div");
         const myBtn = document.createElement("button");
@@ -40,12 +40,14 @@ function displayBooks(array) {
     });
     
     removeBook();
+    changeStatus();
+    
 }
 
 function removeBook() {
     const removeBtn = document.querySelectorAll(".remove-button");
     
-    removeBtn.forEach((button, index) =>{
+    removeBtn.forEach((button, index) => {
         button.addEventListener("click", () =>{
             removeBookFromArray(myLibrary, index);
             displayBooks(myLibrary);
@@ -55,6 +57,27 @@ function removeBook() {
 
 function removeBookFromArray(array, index) {
     array.splice(index, 1);
+}
+
+
+function changeStatus() {
+    const changeReadStatusBtn = document.querySelectorAll(".change-read-status");
+    
+    changeReadStatusBtn.forEach((button, index) => {
+        button.addEventListener("click" , () => {
+            myLibrary[index].changeReadStatus();
+            displayBooks(myLibrary);
+        })
+    });
+};
+
+
+Book.prototype.changeReadStatus = function() {
+    if (this.read == "Read") {
+        this.read = "Not Read";
+    } else {
+        this.read = "Read";
+    }
 }
 
 /* Add dialog / Modal */
@@ -71,7 +94,6 @@ modalBtn.addEventListener("click", () => {
 
 confirmBtn.addEventListener("click", (event) => {
     event.preventDefault();
-    removeAllBooks();
     dialog.close(addBookToLibrary(myInput.value, mySelect.value));
     displayBooks(myLibrary);
 })
@@ -85,15 +107,10 @@ function removeAllBooks() {
 }
 
 
-Book.prototype.changeReadStatus = function() {
-    if (this.read == "Read") {
-        this.read = "Not Read";
-    } else {
-        this.read = "Read";
-    }
-}
 
 const book1 = new Book("Hyperion", "Read");
 book1.changeReadStatus();
+console.log(book1);
+
 
 displayBooks(myLibrary);
