@@ -11,15 +11,16 @@ function addBookToLibrary(book, read) {
     myLibrary.push(newBook);
 };
 
-/* addBookToLibrary("Harry Potter");
+addBookToLibrary("Harry Potter");
 addBookToLibrary("The Silence of the Lambs");
 addBookToLibrary("The Hobbit");
-addBookToLibrary("Salem"); */
+addBookToLibrary("Salem");
 
 console.log(myLibrary);
 
 function displayBooks(array) {
     const container = document.querySelector("#library-container");
+    container.innerHTML = "";
 
     array.forEach(element => {
         const myDiv = document.createElement("div");
@@ -28,9 +29,28 @@ function displayBooks(array) {
         myBtn.textContent = "Remove Book";
         myDiv.classList.add("book");
         myBtn.classList.add("remove-button");
+        
+        
         container.appendChild(myDiv);
         myDiv.appendChild(myBtn);
     });
+    
+    removeBook();
+}
+
+function removeBook() {
+    const removeBtn = document.querySelectorAll(".remove-button");
+    
+    removeBtn.forEach((button, index) =>{
+        button.addEventListener("click", () =>{
+            removeBookFromArray(myLibrary, index);
+            displayBooks(myLibrary);
+        });
+    });    
+}
+
+function removeBookFromArray(array, index) {
+    array.splice(index, 1);
 }
 
 /* Add dialog / Modal */
@@ -52,12 +72,14 @@ confirmBtn.addEventListener("click", (event) => {
     displayBooks(myLibrary);
 })
 
+
 function removeAllBooks() {
     const removeBooks = document.querySelectorAll(".book");
     removeBooks.forEach(element => {
         element.remove();
     });
 }
+
 
 Book.prototype.changeReadStatus = function() {
     if (this.read == "Read") {
@@ -69,3 +91,5 @@ Book.prototype.changeReadStatus = function() {
 
 const book1 = new Book("Hyperion", "Read");
 book1.changeReadStatus();
+
+displayBooks(myLibrary);
