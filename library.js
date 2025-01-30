@@ -11,10 +11,10 @@ function addBookToLibrary(book, read) {
     myLibrary.push(newBook);
 };
 
-addBookToLibrary("Harry Potter");
-addBookToLibrary("The Silence of the Lambs");
-addBookToLibrary("The Hobbit");
-addBookToLibrary("Salem");
+addBookToLibrary("Harry Potter", "Not Read");
+addBookToLibrary("The Silence of the Lambs", "Read");
+addBookToLibrary("The Hobbit", "Not Read");
+addBookToLibrary("Salem", "Read");
 
 console.log(myLibrary);
 
@@ -25,14 +25,18 @@ function displayBooks(array) {
     array.forEach(element => {
         const myDiv = document.createElement("div");
         const myBtn = document.createElement("button");
+        const myChangeReadStatusBtn = document.createElement("button");
         myDiv.textContent = element.title + " " + element.read;
         myBtn.textContent = "Remove Book";
+        myChangeReadStatusBtn.textContent = "Change Read Status";
         myDiv.classList.add("book");
         myBtn.classList.add("remove-button");
+        myChangeReadStatusBtn.classList.add("change-read-status");
         
         
         container.appendChild(myDiv);
         myDiv.appendChild(myBtn);
+        myDiv.appendChild(myChangeReadStatusBtn);
     });
     
     removeBook();
