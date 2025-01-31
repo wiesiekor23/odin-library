@@ -89,9 +89,13 @@ function addModal() {
         dialog.close(addBookToLibrary(myInput.value, mySelect.value));
         displayBooks(myLibrary);
         document.getElementById("myModal").reset();
-        document.getElementById("add-button").blur();
     })
 };
+
+document.getElementById("myDialog").addEventListener("close", () => {
+    document.getElementById("add-button").blur();
+});
+
 
 addBookToLibrary("Harry Potter", "Not Read");
 addBookToLibrary("The Silence of the Lambs", "Read");
