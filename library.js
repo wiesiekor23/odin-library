@@ -88,6 +88,7 @@ function addModal() {
         event.preventDefault();
         dialog.close(addBookToLibrary(myInput.value, mySelect.value));
         displayBooks(myLibrary);
+        document.getElementById("myModal").reset();
     })
 };
 
