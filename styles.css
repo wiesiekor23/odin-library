@@ -78,7 +78,7 @@ main {
     gap: 32px;
     justify-items: center;
     padding: 16px;
-    background-color: rgba(0, 0, 0, 0.97);
+    background-color: rgba(0, 0, 0, 0.95);
 }
 
 .book {
@@ -87,7 +87,7 @@ main {
     justify-items: ;
     width: 250px;
     height: 200px;
-    background-color: aqua;
+    background-color: rgba(245, 138, 66, 0.6);
     border-end-end-radius: 20px;
     border-top-right-radius: 20px;
 }
