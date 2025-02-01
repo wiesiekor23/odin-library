@@ -17,23 +17,26 @@ function displayBooks(array) {
     
     array.forEach(element => {
         const bookDiv = document.createElement("div");
+        const titleDiv = document.createElement("div");
         const statusDiv = document.createElement("div");
         const changeReadStatusBtn = document.createElement("button");
         const readStatus = document.createElement("div");
         const removeBtn = document.createElement("button");
 
-        bookDiv.textContent = element.title
+        titleDiv.textContent = element.title
         changeReadStatusBtn.textContent = "Change Read Status";
         readStatus.textContent = element.read;
         removeBtn.textContent = "Remove Book";
 
         bookDiv.classList.add("book");
+        titleDiv.classList.add("book-title");
         statusDiv.classList.add("status");
         changeReadStatusBtn.classList.add("change-read-status");
         readStatus.classList.add("read-status");
         removeBtn.classList.add("remove-button");
         
         container.appendChild(bookDiv);
+        bookDiv.appendChild(titleDiv);
         bookDiv.appendChild(statusDiv);
         statusDiv.appendChild(changeReadStatusBtn);
         statusDiv.appendChild(readStatus);
