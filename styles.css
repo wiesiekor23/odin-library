@@ -67,8 +67,17 @@ main {
     grid-template-columns: 1fr 5fr 1fr;
 }
 
+#library-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    justify-items: center;
+}
+
 .book {
-    width: auto;
-    height: auto;
+    width: 250px;
+    height: 350px;
     background-color: aqua;
+    border-end-end-radius: 20px;
+    border-top-right-radius: 20px;
 }

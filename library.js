@@ -29,8 +29,8 @@ function displayBooks(array) {
         ChangeReadStatusBtn.classList.add("change-read-status");
         
         container.appendChild(bookDiv);
-        bookDiv.appendChild(removeBtn);
         bookDiv.appendChild(ChangeReadStatusBtn);
+        bookDiv.appendChild(removeBtn);
     });
     
     removeBook();
