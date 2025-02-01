@@ -64,20 +64,44 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 15% 70% 15%;
+    background-image: url(pics/will-van-wingerden-dsvJgiBJTOs-unsplash\(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #library-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-rows: repeat(auto-fit, 200px);
     gap: 32px;
     justify-items: center;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.97);
 }
 
 .book {
+    display: flex;
+    flex-direction: column;
+    justify-items: ;
     width: 250px;
-    height: 350px;
+    height: 200px;
     background-color: aqua;
     border-end-end-radius: 20px;
     border-top-right-radius: 20px;
 }
+
+.status {
+    display: flex;
+    gap: 8px;
+}
+
+.remove-button {
+    margin-top: auto;
+}
+
+footer {
+    height: 45px;
+/*     Photo by <a href="https://unsplash.com/@willvanw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Will van Wingerden</a> on <a href="https://unsplash.com/photos/photo-of-library-hall-dsvJgiBJTOs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ */}
