@@ -88,7 +88,6 @@ main {
 .book {
     display: flex;
     flex-direction: column;
-    justify-items: ;
     width: 250px;
     height: 200px;
     background-color: rgba(245, 138, 66, 0.6);
@@ -103,8 +102,23 @@ main {
 
 .remove-button {
     margin-top: auto;
+    border-bottom-right-radius: 20px;
+    outline: none;
+    border: none;
+    height: 50px;
+    background-color:rgba(245, 138, 66);
+    color:antiquewhite;
+    font-size: 24px;
+    font-weight: bold;
 }
 
+.remove-button:hover {
+    background-color: rgba(245, 138, 66, 0.6);
+}
+
+.remove-button:active {
+    background-color: rgba(245, 138, 66, 0.3);
+}
 footer {
     height: 45px;
 /*     Photo by <a href="https://unsplash.com/@willvanw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Will van Wingerden</a> on <a href="https://unsplash.com/photos/photo-of-library-hall-dsvJgiBJTOs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
