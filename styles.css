@@ -63,7 +63,7 @@ header {
     width: 100vw;
     height: 100vh; 
     display: grid;
-    grid-template-rows: 2fr 10fr 1fr;
+    grid-template-rows: 20% 70% 10%;
 }
 
 main {
@@ -83,6 +83,8 @@ main {
     justify-items: center;
     padding: 16px;
     background-color: rgba(0, 0, 0, 0.95);
+    height: auto;
+    overflow: auto;
 }
 
 .book {
