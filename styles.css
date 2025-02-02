@@ -14,6 +14,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: linear-gradient(to bottom, red, orange, brown);
 }
 
 .title-div {
@@ -177,6 +178,13 @@ main {
     background-color: rgba(245, 138, 66, 0.3);
 }
 footer {
-    height: 45px;
-/*     Photo by <a href="https://unsplash.com/@willvanw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Will van Wingerden</a> on <a href="https://unsplash.com/photos/photo-of-library-hall-dsvJgiBJTOs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
- */}
+    background-image: linear-gradient(to top,black, orange);
+    text-align: center;
+    align-content: center;
+}
+
+footer a {
+     color: grey;
+     text-decoration: none;
+     font-size: 120%;
+ }
