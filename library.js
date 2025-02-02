@@ -34,6 +34,11 @@ function displayBooks(array) {
         changeReadStatusBtn.classList.add("change-read-status");
         readStatus.classList.add("read-status");
         removeBtn.classList.add("remove-button");
+        if (element.read == "Read") {
+            readStatus.style.cssText = "color: darkblue;";
+        } else {
+            readStatus.style.cssText = "color: darkred;";
+        }
         
         container.appendChild(bookDiv);
         bookDiv.appendChild(titleDiv);
@@ -81,6 +86,12 @@ Book.prototype.changeReadStatus = function() {
     }
 }
 
+Book.prototype.checkStatus = function() {
+    if (this.read == "Read") {
+    } else {
+    }
+};
+
 /* Add dialog / Modal */
 
 function addModal() {
@@ -107,6 +118,34 @@ document.getElementById("myDialog").addEventListener("close", () => {
 });
 
 
+addBookToLibrary("Harry Potter", "Not Read");
+addBookToLibrary("The Silence of the Lambs", "Read");
+addBookToLibrary("The Hobbit", "Not Read");
+addBookToLibrary("Salem", "Read");
+addBookToLibrary("Harry Potter", "Not Read");
+addBookToLibrary("The Silence of the Lambs", "Read");
+addBookToLibrary("The Hobbit", "Not Read");
+addBookToLibrary("Salem", "Read");
+addBookToLibrary("Harry Potter", "Not Read");
+addBookToLibrary("The Silence of the Lambs", "Read");
+addBookToLibrary("The Hobbit", "Not Read");
+addBookToLibrary("Salem", "Read");
+addBookToLibrary("Harry Potter", "Not Read");
+addBookToLibrary("The Silence of the Lambs", "Read");
+addBookToLibrary("The Hobbit", "Not Read");
+addBookToLibrary("Salem", "Read");
+addBookToLibrary("Harry Potter", "Not Read");
+addBookToLibrary("The Silence of the Lambs", "Read");
+addBookToLibrary("The Hobbit", "Not Read");
+addBookToLibrary("Salem", "Read");
+addBookToLibrary("Harry Potter", "Not Read");
+addBookToLibrary("The Silence of the Lambs", "Read");
+addBookToLibrary("The Hobbit", "Not Read");
+addBookToLibrary("Salem", "Read");
+addBookToLibrary("Harry Potter", "Not Read");
+addBookToLibrary("The Silence of the Lambs", "Read");
+addBookToLibrary("The Hobbit", "Not Read");
+addBookToLibrary("Salem", "Read");
 addBookToLibrary("Harry Potter", "Not Read");
 addBookToLibrary("The Silence of the Lambs", "Read");
 addBookToLibrary("The Hobbit", "Not Read");
