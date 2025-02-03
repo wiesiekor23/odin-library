@@ -23,7 +23,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-image: linear-gradient(to bottom, red, orange, brown);
+    background-image: linear-gradient(to bottom, orange, #FFE4CD, #FACD4B);
 }
 
 .title-div {
@@ -41,7 +41,7 @@ header {
     width: 200px;
     height: 60px;
     border-radius: 20px;
-    background-color: cadetblue;
+    background-color: #FA5F4B;
     color: aliceblue;
     font-size: 24px;
     font-weight: 600;
