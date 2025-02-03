@@ -5,8 +5,8 @@ function Book(title, read) {
     this.read = read;
 };
 
-function addBookToLibrary(book, read) {
-    const newBook = new Book(book, read);
+function addBookToLibrary(title, read) {
+    const newBook = new Book(title, read);
 
     myLibrary.push(newBook);
 };
@@ -116,40 +116,6 @@ function addModal() {
 document.getElementById("myDialog").addEventListener("close", () => {
     document.getElementById("add-button").blur();
 });
-
-
-addBookToLibrary("Harry Potter", "Not Read");
-addBookToLibrary("The Silence of the Lambs", "Read");
-addBookToLibrary("The Hobbit", "Not Read");
-addBookToLibrary("Salem", "Read");
-addBookToLibrary("Harry Potter", "Not Read");
-addBookToLibrary("The Silence of the Lambs", "Read");
-addBookToLibrary("The Hobbit", "Not Read");
-addBookToLibrary("Salem", "Read");
-addBookToLibrary("Harry Potter", "Not Read");
-addBookToLibrary("The Silence of the Lambs", "Read");
-addBookToLibrary("The Hobbit", "Not Read");
-addBookToLibrary("Salem", "Read");
-addBookToLibrary("Harry Potter", "Not Read");
-addBookToLibrary("The Silence of the Lambs", "Read");
-addBookToLibrary("The Hobbit", "Not Read");
-addBookToLibrary("Salem", "Read");
-addBookToLibrary("Harry Potter", "Not Read");
-addBookToLibrary("The Silence of the Lambs", "Read");
-addBookToLibrary("The Hobbit", "Not Read");
-addBookToLibrary("Salem", "Read");
-addBookToLibrary("Harry Potter", "Not Read");
-addBookToLibrary("The Silence of the Lambs", "Read");
-addBookToLibrary("The Hobbit", "Not Read");
-addBookToLibrary("Salem", "Read");
-addBookToLibrary("Harry Potter", "Not Read");
-addBookToLibrary("The Silence of the Lambs", "Read");
-addBookToLibrary("The Hobbit", "Not Read");
-addBookToLibrary("Salem", "Read");
-addBookToLibrary("Harry Potter", "Not Read");
-addBookToLibrary("The Silence of the Lambs", "Read");
-addBookToLibrary("The Hobbit", "Not Read");
-addBookToLibrary("Salem", "Read");
 
 displayBooks(myLibrary);
 addModal();
