@@ -86,12 +86,6 @@ Book.prototype.changeReadStatus = function() {
     }
 }
 
-Book.prototype.checkStatus = function() {
-    if (this.read == "Read") {
-    } else {
-    }
-};
-
 /* Add dialog / Modal */
 
 function addModal() {
