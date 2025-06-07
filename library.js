@@ -1,8 +1,18 @@
 const myLibrary = [];
 
-function Book(title, read) {
-    this.title = title
-    this.read = read;
+class Book {
+    constructor(title, read) {
+        this.title = title
+        this.read = read;
+    }
+
+    changeReadStatus() {
+        if (this.read == "Read") {
+            this.read = "Not Read";
+        } else {
+            this.read = "Read";
+        }
+    }
 };
 
 function addBookToLibrary(title, read) {
@@ -10,6 +20,8 @@ function addBookToLibrary(title, read) {
 
     myLibrary.push(newBook);
 };
+/* make it a class method */
+
 
 function displayBooks(array) {
     const container = document.querySelector("#library-container");
@@ -78,13 +90,6 @@ function changeStatus() {
     });
 };
 
-Book.prototype.changeReadStatus = function() {
-    if (this.read == "Read") {
-        this.read = "Not Read";
-    } else {
-        this.read = "Read";
-    }
-}
 
 /* Add dialog / Modal */
 
