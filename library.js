@@ -3,7 +3,7 @@ class Book {
         this.title = title
         this.read = read;
     }
-    
+
     changeReadStatus() {
         if (this.read == "Read") {
             this.read = "Not Read";
@@ -17,19 +17,16 @@ class Library {
     constructor() {
         this.library = [new Book("Huhu", "Read")];
     }
-    
+
     addBook(title, read) {
         this.library.push(new Book(title, read))
     }
-    
+
     removeBook(index) {
         this.library.splice(index, 1);
     }
-    
 }
 
-const newLibrary = new Library();
-const bookLibrary = newLibrary.library;
 
 function displayBooks(array) {
     const container = document.querySelector("#library-container");
@@ -74,7 +71,7 @@ function displayBooks(array) {
 
 function removeBook() {
     const removeBtn = document.querySelectorAll(".remove-button");
-
+    
     removeBtn.forEach((button, index) => {
         button.addEventListener("click", () => {
             newLibrary.removeBook(index);
@@ -86,7 +83,7 @@ function removeBook() {
 
 function changeStatus() {
     const changeReadStatusBtn = document.querySelectorAll(".change-read-status");
-
+    
     changeReadStatusBtn.forEach((button, index) => {
         button.addEventListener("click", () => {
             newLibrary.library[index].changeReadStatus();
@@ -104,11 +101,11 @@ function addModal() {
     const myInput = document.querySelector("input");
     const mySelect = document.querySelector("select");
     const confirmBtn = document.querySelector(".confirm-button");
-
+    
     modalBtn.addEventListener("click", () => {
         dialog.showModal();
     })
-
+    
     confirmBtn.addEventListener("click", (event) => {
         event.preventDefault();
         dialog.close(newLibrary.addBook(myInput.value, mySelect.value));
@@ -122,5 +119,7 @@ document.getElementById("myDialog").addEventListener("close", () => {
 });
 
 
+const newLibrary = new Library();
+const bookLibrary = newLibrary.library;
 displayBooks(bookLibrary);
 addModal();
