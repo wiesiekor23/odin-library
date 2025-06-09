@@ -15,7 +15,7 @@ class Book {
 
 class Library {
     constructor() {
-        this.library = [new Book("Huhu", "Read")];
+        this.library = [];
     }
 
     addBook(title, read) {
