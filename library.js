@@ -27,7 +27,6 @@ class Library {
     }
 }
 
-
 function displayBooks(array) {
     const container = document.querySelector("#library-container");
     container.innerHTML = "";
@@ -80,7 +79,6 @@ function removeBook() {
     });
 }
 
-
 function changeStatus() {
     const changeReadStatusBtn = document.querySelectorAll(".change-read-status");
     
@@ -91,7 +89,6 @@ function changeStatus() {
         })
     });
 };
-
 
 /* Add dialog / Modal */
 
@@ -117,7 +114,6 @@ function addModal() {
 document.getElementById("myDialog").addEventListener("close", () => {
     document.getElementById("add-button").blur();
 });
-
 
 const newLibrary = new Library();
 const bookLibrary = newLibrary.library;
